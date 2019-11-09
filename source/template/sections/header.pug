@@ -1,0 +1,16 @@
+header.page-header
+  .page-header__logo.logo
+    img.page-header__logo--image(src='assets/images/webase-mobile.svg', alt="The WEBASE team's logo")
+  section.header__main
+    .header__background
+      picture
+        source(srcset="assets/images/hero-img-desktop.webp" type="image/webp")
+        source(srcset="assets/images/hero-img-desktop.jpg" type="image/jpeg")
+        img(src="assets/images/hero-img-desktop.jpg" alt="background image")
+    h1.header__title
+      |  Landing pages
+      span.header__subtitle
+        span.header__subtitle--wrap  Are our
+        |  primary product
+    button.modal-video__button(type='submit', aria-label='video') play
+  .header__overlay
