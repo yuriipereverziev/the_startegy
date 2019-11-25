@@ -1,3 +1,21 @@
 .page-main {
-  flex: 1 0 auto;
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "drive drive"
+                       "about about"
+                       "team team"
+                       "services services"
+                       "contact-form contact-form";
+  grid-template-rows: 12fr;
+  grid-template-columns: 1fr;
+  padding: 0 100px;
+  grid-row-gap: 100px;
+  background: url("../images/square-top.png");
+  @include tablet {
+    padding: 0 25px;
+  }
+  @include mobile {
+    padding: 0 15px;
+    background: none;
+  }
 }

@@ -1,0 +1,16 @@
+
+h2 span {
+  position: relative;
+}
+
+h2 span::after {
+  position: absolute;
+  content: "";
+  background-color: $secondary-color;
+  border-radius: 20px;
+  width: 110%;
+  height: 15px;
+  bottom: 3px;
+  left: -5%;
+  z-index: -1;
+}

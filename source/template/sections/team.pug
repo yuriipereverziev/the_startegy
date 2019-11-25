@@ -1,0 +1,35 @@
+section.team
+    h3.team__title Meet our team
+    ul.team__list
+        li.team__item
+            .team__item--picture
+                picture
+                    source(type='image/webp', srcset='assets/images/matt.webp', media='(min-width: 325px)')
+                    source(type='image/jpeg', srcset='assets/images/matt.jpg', media='(min-width: 325px)')
+                    img(src='assets/images/matt.jpg', alt='Customer care')
+                .team__wrapper
+                    h3.team__name Matt Vallborg
+                    p.team__position Customer care
+            p.team__text
+                | Laoreet at dolor euismod faucibus orci vitae amet in dictum.
+                | At consectetur magna ornare duis.
+                | Mattis dui in vitae ultrices integer sit amet, mattis.
+
+                a.team__link Follow him on instagram
+        li.team__item
+            .team__item--picture
+                picture
+                    source(type='image/webp', srcset='assets/images/ann.webp', media='(min-width: 325px)')
+                    source(type='image/jpeg', srcset='assets/images/ann.jpg', media='(min-width: 325px)')
+                    img(src='assets/images/ann.jpg', alt='Operartion manager')
+                .team__wrapper
+                    h3.team__name Ann Slanski
+                    p.team__position Operartion manager
+            p.team__text
+                | Laoreet at dolor euismod faucibus orci vitae amet in dictum.
+                | At consectetur magna ornare duis.
+                | Mattis dui in vitae.
+
+                a.team__link Follow him on instagram
+    .team__button
+        a.button.team-item-button(href='#contact-form', aria-label='Contact') Contact

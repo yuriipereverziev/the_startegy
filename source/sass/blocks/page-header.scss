@@ -1,132 +1,103 @@
 .page-header {
-  width: 100%;
-  margin: 0 auto;
-
+  display: grid;
+  grid-template-areas: "logo logo" "buttons title" "text text";
+  grid-template-rows: 235px minmax(280px) minmax(305px);
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  background: url("../images/header-background.jpg") center/cover;
+  grid-area: header;
+  padding: 0 100px;
   @include tablet {
-    display: flex;
-    position: relative;
-    flex-direction: column;
+    grid-template-areas: "logo logo" "buttons title" "text text";
+    grid-template-rows: 120px 200px auto;
+    padding: 0 25px;
   }
-}
-
-.header__main {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60vw;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center 1px;
-  background-size: cover;
-  color: $yankees-blue;
-
-  @include tablet {
-    align-items: flex-start;
-    height: 51vw;
-  }
-}
-
-.header__overlay {
-  position: absolute;
-  top: 120px;
-  left: 0;
-  width: 100%;
-  height: 60vw;
-  background: linear-gradient(180deg, $white-color 1.29%, rgba(255, 255, 255, 0.51) 20.26%);
-  mix-blend-mode: lighten;
-
-  @include tablet {
-    top: 0;
-    height: 51vw;
-  }
-
-  @include desktop {
-    height: 54.5vmax;
-  }
-}
-
-.header__title {
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: rem(320px);
-  margin: 0 auto;
-  font-size: rem(30px);
-  text-align: center;
-  text-transform: uppercase;
-  z-index: 2;
-
-  @include tablet {
-    justify-content: flex-start;
-    margin: 0;
-    font-size: remt(36px);
-    margin-top: remt(80px);
-    text-align: start;
-  }
-
-  @include laptop {
-    width: reml(420px);
-    font-size: reml(42px);
-  }
-
-  @include desktop {
-    font-size: reml(54px);
-  }
-}
-
-.header__subtitle {
-  font-size: rem(26px);
-
-  @include tablet {
-    font-size: remt(29px);
-  }
-
-  @include laptop {
-    font-size: reml(36px);
-  }
-
-   @include desktop {
-    font-size: reml(42px);
+  @include mobile {
+    grid-template-areas:  "logo logo" "title title" "text text" "buttons buttons" "link link";
+    grid-template-rows: 100px;
+    padding: 0 16px;
   }
 }
 
 .page-header__logo {
-  min-height: rem(120px);
-  margin: 0 auto;
-  background-image: url('../images/pattern-top.svg');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: cover;
-  text-align: center;
-
-  @include tablet {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    min-height: remt(80px);
-    background: $isabelline;
-    text-align: start;
-    padding: 0 remt(50px);
-    z-index: 2;
-  }
-
-  @include laptop {
-    background: linear-gradient(95.22deg, $isabelline 38.35%, rgba(239, 239, 239, 0) 58.41%);
-  }
-
-  @include desktop {
-    padding: 0 reml(100px);
+  margin-top: 40px;
+  grid-area: logo;
+  @include mobile {
+    margin-top: 30px;
   }
 }
 
 .page-header__logo--image {
-  padding-top: rem(30px);
-  vertical-align: bottom;
-
+  width: 120px;
+  height: 73.3px;
   @include tablet {
-    padding: 0;
+    width: 80px;
+    height: 48.86px;
   }
 }
+
+.page-header__title {
+  width: 450px;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 78px;
+  line-height: 98px;
+  color: $light;
+  grid-area: title;
+  justify-self: center;
+  align-self: center;
+  @include tablet {
+    width: 300px;
+    font-size: 50px;
+    line-height: 63px;
+    align-self: center;
+  }
+  @include mobile {
+    width: 70%;
+    justify-self: flex-end;
+    font-size: 45px;
+    line-height: 57px;
+  }
+}
+
+.page-header__text {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+  color: $light;
+  grid-area: text;
+  align-self: center;
+  @include tablet {
+    width: 280px;
+    font-size: 25px;
+    line-height: 32px;
+  }
+  @include mobile {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.anchor {
+  display: none;
+  grid-area: link;
+  justify-self: center;
+  align-self: center;
+
+  //@keyframes bounce {
+  //  0% {transform: translateY(-2000px);}
+  //  70% {transform: translateY(30px);}
+  //  90% {transform: translateY(-10px);}
+  //  100% {transform: translateY(0);}
+  //}
+  @include mobile {
+    display: block;
+  }
+}
+
+.button-learn-more {
+  background: $secondary-color;
+}
+

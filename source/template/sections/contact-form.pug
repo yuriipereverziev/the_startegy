@@ -1,0 +1,16 @@
+section#contact-form.contact.contact-form
+    h2.contact-form__title
+        span Contact us
+    form.form(action='handler.php', method='POST' name='contact')
+        .form-wrapper__info
+            p.form__input-name
+                label(for='firstname') Your name
+                input#firstname(type='text', name='firstname', placeholder='ex. Jhon Dow', autocomplete='off')
+            p.form__input-email
+                label(for='email') Your e-mail
+                input#email(type='email', name='email', placeholder='ex. dow85@example.com', autocomplete='off')
+        p.form__input-text
+            label(for='message') Your message
+            textarea#message(placeholder='Write your entry here', rows='8', cols='30', name='message')
+        .contact-form__button
+            button.button(type='submit', aria-label='send form') Send

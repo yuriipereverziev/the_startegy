@@ -1,0 +1,70 @@
+.drive {
+  grid-area: drive;
+  margin-top: 100px;
+  @include laptop{
+    width: 350px;
+    margin-top: 50px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.drive__title {
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 50px;
+  @include laptop {
+    margin-bottom: 35px;
+  }
+}
+
+.drive__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 70px;
+  @include laptop {
+    padding: 0;
+  }
+}
+
+.drive__item {
+  position: relative;
+  width: 33%;
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 50px;
+  @include laptop {
+    margin-bottom: 30px;
+    width: 345px;
+  }
+  @include mobile {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+.drive__item::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  left: 0;
+  background-image: url("../images/drive__item.svg");
+}
+
+.drive__item:nth-child(2) {
+  align-self: center;
+  @include laptop {
+    align-self: start;
+  }
+}
+
+.drive__item:last-child {
+  align-self: flex-end;
+  @include laptop {
+    align-self: start;
+  }
+}

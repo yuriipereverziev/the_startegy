@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+  width: 550px;
+  @include tablet {
+    width: 500px;
+  }
+  @include mobile {
+    width: 250px;
+  }
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: $dark !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: $secondary-color !important;
+}
+
+.prev {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 40px;
+  background: url("../images/owl-prev.svg")no-repeat;
+  top:37%;
+  left: 10px;
+  @include mobile {
+    top:30%;
+  }
+}
+
+.next {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 40px;
+  background: url("../images/owl-next.svg")no-repeat;
+  top:37%;
+  right: 10px;
+  @include mobile {
+    top:30%;
+  }
+}

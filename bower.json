@@ -1,0 +1,18 @@
+{
+  "name": "the_strategy",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/yuriipereverziev/the_startegy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
+  }
+}

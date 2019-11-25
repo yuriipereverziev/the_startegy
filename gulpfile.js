@@ -13,6 +13,7 @@ global.$ = {
   del: require('del'),
   browserSync: require('browser-sync').create(),
   gulpStylelint: require('gulp-stylelint'),
+  cssunit: require('gulp-css-unit'),
   gp: require('gulp-load-plugins')()
 };
 

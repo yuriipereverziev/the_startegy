@@ -1,48 +1,41 @@
 @font-face {
-  font-family: 'ibm_plex_sansbold';
-  font-style: normal;
+  font-family: 'loraregular';
+  src: url('../fonts/lora-regular-webfont.woff2') format('woff2'),
+  url('../fonts/lora-regular-webfont.woff') format('woff');
   font-weight: normal;
-  src: url('../fonts/ibmplexsans-bold-webfont.woff2') format('woff2'), url('../fonts/ibmplexsans-bold-webfont.woff') format('woff');
+  font-style: normal;
   font-display: swap;
 }
 
+
 @font-face {
-  font-family: 'ibm_plex_sansregular';
-  font-style: normal;
+  font-family: 'fjalla_oneregular';
+  src: url('../fonts/fjallaone-regular-webfont.woff2') format('woff2'),
+  url('../fonts/fjallaone-regular-webfont.woff') format('woff');
   font-weight: normal;
-  src: url('../fonts/ibmplexsans-regular-webfont.woff2') format('woff2'), url('../fonts/ibmplexsans-regular-webfont.woff') format('woff');
+  font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'ibm_plex_serif_semiboldRg';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/ibmplexserif-semibold-webfont.woff2') format('woff2'), url('../fonts/ibmplexserif-semibold-webfont.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ibm_plex_serifregular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/ibmplexserif-regular-webfont.woff2') format('woff2'), url('../fonts/ibmplexserif-regular-webfont.woff') format('woff');
-  font-display: swap;
-}
 
 html {
   font-size: 16px;
-
-  @include tablet {
-    font-size: 18px;
+  @include desktop {
+    font-size: 16px;
   }
 
   @include laptop {
-    font-size: 22px;
+    font-size: 15px;
   }
-  @include desktop {
-    font-size: 24px;
+
+  @include tablet {
+    font-size: 14px;
   }
+
+  @include mobile {
+    font-size: 13px;
+  }
+
 }
 
 html,
@@ -57,16 +50,16 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-width: 320px;
   padding: 0;
   margin: 0;
-  font-family: 'ibm_plex_sansregular', 'Arial', sans-serif;
+  font-family: 'loraregular', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.42;
-  background-color: $white-color;
+  background-color: #E5E5E5;
 }
 
 ul {
@@ -91,12 +84,13 @@ h4,
 h5 {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'fjalla_oneregular', 'Arial', sans-serif;
   font-weight: normal;
 }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -114,5 +108,12 @@ a {
   white-space: nowrap;
   border: 0;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
 }
+
+//.container {
+//  margin: 0 auto;
+//  width: 1440px;
+//  @include laptop {
+//    width: 1024px;
+//}

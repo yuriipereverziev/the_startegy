@@ -1,39 +1,66 @@
-// сделать inset box shadow
-
 .button {
-  display: block;
-  width: auto;
-  padding: rem(10px) rem(20px);
-  color: $isabelline;
+  min-width: 220px;
+  display: inline-block;
+  padding: 13px 20px;
+  font-size: 26px;
+  line-height: 33px;
   text-align: center;
-  text-transform: uppercase;
+  color: $light;
+  font-family: 'fjalla_oneregular', 'Arial', sans-serif;
+  background-color: $cta;
+  border: none;
   cursor: pointer;
-  background-color: $vivid-orange;
-  border: 0;
-  border-radius: 25px 0;
-  box-shadow: 0 rem(3px) rem(8px) rgba(0, 0, 0, 0.5);
-
-  &:active {
-    opacity: 0.7;
-  }
-
-  &:focus {
-    border: 1px solid $cornflower-blue;
-    outline: none;
-    box-shadow: 0 0 rem(5px) $cornflower-blue;
-  }
-
+  margin: 0 auto;
+  margin-bottom: 20px;
   @include tablet {
-    border-radius: 35px 0;
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: rem(2px) rem(2px) rem(5px) rgba(0, 0, 0, 0.1);
-      transition: 0.4s ease-out;
-    }
+    min-width: 180px;
+    font-size: 20px;
+    line-height: 25px;
   }
+  @include mobile {
+    min-width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 10px;
+  }
+}
 
-  @include desktop {
-    font-size: rem(18px);
+.page-header__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  grid-area: buttons;
+  align-self: center;
+  text-align: center;
+  @include mobile {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.services__button,
+.team__button {
+  width: 100%;
+  text-align: center;
+}
+
+.services__item-button {
+  display: none;
+  @include mobile {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.contact-form__button {
+  display: inline-block;
+  width: 720px;
+  @include tablet {
+    width: 710px;
+  }
+  @include mobile {
+    width: 290px;
+    text-align: center;
   }
 }
