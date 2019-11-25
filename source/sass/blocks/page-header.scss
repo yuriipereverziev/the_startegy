@@ -85,19 +85,19 @@
   grid-area: link;
   justify-self: center;
   align-self: center;
-
-  //@keyframes bounce {
-  //  0% {transform: translateY(-2000px);}
-  //  70% {transform: translateY(30px);}
-  //  90% {transform: translateY(-10px);}
-  //  100% {transform: translateY(0);}
-  //}
   @include mobile {
     display: block;
+    transition: all 0.5s ease;
+    transition-delay: 4s;
+    animation: 1.5s ease-in-out infinite running bounce;
   }
 }
 
-.button-learn-more {
-  background: $secondary-color;
+@keyframes bounce {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(12px);}
+  100% {transform: translateY(0px);}
 }
+
+
 
