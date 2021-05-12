@@ -55,6 +55,6 @@
   "dependencies": {
     "bower": "^1.8.8",
     "normalize.css": "^8.0.1",
-    "postcss": "^7.0.17"
+    "postcss": "^8.2.10"
   }
 }
